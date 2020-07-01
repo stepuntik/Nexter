@@ -13,3 +13,59 @@ $color-grey-dark-2: #6D5D4B;
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;          //1200px / 16 = 75em
+$bp-large: 62.5em;          //1000px / 16 = 62.5em
+$bp-medium: 50em;           //800px / 16 = 50em
+$bp-medium-small: 43.75em;  //700px / 16 = 43.75em
+$bp-small: 37.5em;          //600px / 16 = 37.5em
+$bp-smallest: 31.25em;          //500px / 16 = 31.25em
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    //we start with 8-column layout
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    //we put two of 1 fr to center 8 columns. we can't use margin 0 auto or justify-content, becuase we have a navbar on the right as part of the grid;
+
+    @media only screen and (max-width: $bp-large) {
+
+        display: grid;
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content); //but now 6rem is not 60px, it's 48px, because of font-size
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+
+        display: grid;
+        grid-template-rows: 6rem calc(100vh - 6rem); //the rest is sized based on the content 
+        }
+
+}
+

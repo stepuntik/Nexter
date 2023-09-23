@@ -1,7 +1,5 @@
 # Nexter - A Modern Real Estate Website
 
-![Nexter](nexter.jpg)
-
 Nexter is a beautifully designed modern real estate website that allows users to explore and discover their dream homes. This repository contains the complete source code for Nexter, making it a fantastic starting point for your own real estate website project.
 
 ## Features

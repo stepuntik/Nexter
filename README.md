@@ -54,7 +54,3 @@ Nexter is licensed under the [MIT License](LICENSE.md).
 ## Acknowledgments
 
 - This project is inspired by the [Advanced CSS and Sass](https://www.udemy.com/course/advanced-css-and-sass/) course on Udemy.
-
----
-
-You can use this template to create a README for your Nexter repository. Make sure to include relevant images, such as screenshots, to showcase the project's appearance. Additionally, customize the content to provide specific details about your project's functionality and usage.
